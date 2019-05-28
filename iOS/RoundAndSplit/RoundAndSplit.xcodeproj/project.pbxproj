@@ -31,6 +31,8 @@
 		6AF5A1F4199F5F0A00566B5E /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AF5A1F3199F5F0A00566B5E /* Constants.swift */; };
 		6AF6517119EAE38A006568A8 /* ExtendedHitAreaButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AF6517019EAE38A006568A8 /* ExtendedHitAreaButton.swift */; };
 		6AF6517319EAE861006568A8 /* ExtendedHitAreaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AF6517219EAE861006568A8 /* ExtendedHitAreaView.swift */; };
+		A227EFEE229CB1F100350BC4 /* ToolTipControl.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A227EFED229CB16900350BC4 /* ToolTipControl.framework */; };
+		A227EFEF229CB1F100350BC4 /* ToolTipControl.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A227EFED229CB16900350BC4 /* ToolTipControl.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,7 +43,35 @@
 			remoteGlobalIDString = 6ADC4EB1195E9BF300463CFD;
 			remoteInfo = RoundAndSplit;
 		};
+		A227EFEC229CB16900350BC4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A227EFE8229CB16900350BC4 /* ToolTipControl.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = A227EFBB229CAE4200350BC4;
+			remoteInfo = ToolTipControl;
+		};
+		A227EFF0229CB1F100350BC4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A227EFE8229CB16900350BC4 /* ToolTipControl.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = A227EFBA229CAE4200350BC4;
+			remoteInfo = ToolTipControl;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		A227EFF2229CB1F100350BC4 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				A227EFEF229CB1F100350BC4 /* ToolTipControl.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		6A08110C19B2556700817C7E /* DecimalTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DecimalTests.swift; path = ../Decimal/DecimalTests.swift; sourceTree = "<group>"; };
@@ -71,6 +101,7 @@
 		6AF5A1F3199F5F0A00566B5E /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		6AF6517019EAE38A006568A8 /* ExtendedHitAreaButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtendedHitAreaButton.swift; sourceTree = "<group>"; };
 		6AF6517219EAE861006568A8 /* ExtendedHitAreaView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtendedHitAreaView.swift; sourceTree = "<group>"; };
+		A227EFE8229CB16900350BC4 /* ToolTipControl.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ToolTipControl.xcodeproj; path = ../../../ToolTipControl/ToolTipControl.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +109,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A227EFEE229CB1F100350BC4 /* ToolTipControl.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -94,6 +126,7 @@
 		6ADC4EA9195E9BF300463CFD = {
 			isa = PBXGroup;
 			children = (
+				A227EFE8229CB16900350BC4 /* ToolTipControl.xcodeproj */,
 				6ADC4ED4195EA1BF00463CFD /* Decimal */,
 				6ADC4EB4195E9BF300463CFD /* RoundAndSplit */,
 				6ADC4EC7195E9BF300463CFD /* RoundAndSplitTests */,
@@ -189,6 +222,14 @@
 			name = Resources;
 			sourceTree = "<group>";
 		};
+		A227EFE9229CB16900350BC4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A227EFED229CB16900350BC4 /* ToolTipControl.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -199,10 +240,12 @@
 				6ADC4EAE195E9BF300463CFD /* Sources */,
 				6ADC4EAF195E9BF300463CFD /* Frameworks */,
 				6ADC4EB0195E9BF300463CFD /* Resources */,
+				A227EFF2229CB1F100350BC4 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				A227EFF1229CB1F100350BC4 /* PBXTargetDependency */,
 			);
 			name = RoundAndSplit;
 			productName = RoundAndSplit;
@@ -240,6 +283,7 @@
 				TargetAttributes = {
 					6ADC4EB1195E9BF300463CFD = {
 						CreatedOnToolsVersion = 6.0;
+						DevelopmentTeam = 9MQ22N8A9M;
 						LastSwiftMigration = 0900;
 					};
 					6ADC4EC3195E9BF300463CFD = {
@@ -253,12 +297,19 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
 			mainGroup = 6ADC4EA9195E9BF300463CFD;
 			productRefGroup = 6ADC4EB3195E9BF300463CFD /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = A227EFE9229CB16900350BC4 /* Products */;
+					ProjectRef = A227EFE8229CB16900350BC4 /* ToolTipControl.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				6ADC4EB1195E9BF300463CFD /* RoundAndSplit */,
@@ -266,6 +317,16 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		A227EFED229CB16900350BC4 /* ToolTipControl.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = ToolTipControl.framework;
+			remoteRef = A227EFEC229CB16900350BC4 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		6ADC4EB0195E9BF300463CFD /* Resources */ = {
@@ -330,6 +391,11 @@
 			isa = PBXTargetDependency;
 			target = 6ADC4EB1195E9BF300463CFD /* RoundAndSplit */;
 			targetProxy = 6ADC4EC5195E9BF300463CFD /* PBXContainerItemProxy */;
+		};
+		A227EFF1229CB1F100350BC4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = ToolTipControl;
+			targetProxy = A227EFF0229CB1F100350BC4 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -465,8 +531,10 @@
 		6ADC4ECF195E9BF300463CFD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				DEVELOPMENT_TEAM = 9MQ22N8A9M;
 				INFOPLIST_FILE = RoundAndSplit/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -481,8 +549,10 @@
 		6ADC4ED0195E9BF300463CFD /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				DEVELOPMENT_TEAM = 9MQ22N8A9M;
 				INFOPLIST_FILE = RoundAndSplit/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

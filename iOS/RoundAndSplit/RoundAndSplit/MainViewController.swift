@@ -24,6 +24,7 @@ import UIKit
 import CoreText
 import MessageUI
 import AssetsLibrary
+import ToolTipControl
 
 class MainViewController: UIViewController, MFMailComposeViewControllerDelegate, UINavigationControllerDelegate, UIActionSheetDelegate, ButtonStripViewDelegate, NumericKeypadDelegate {
 
@@ -78,6 +79,9 @@ class MainViewController: UIViewController, MFMailComposeViewControllerDelegate,
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        ///From ToolTipControl Framework
+        showToolTip()
+        
         let height = UIScreen.main.bounds.size.height
         var screenSize : Style.ScreenSize = .normal
         if height > 480 && height < 667 {
@@ -193,6 +197,18 @@ class MainViewController: UIViewController, MFMailComposeViewControllerDelegate,
         numericKeypadView.delegate = self
 
         NotificationCenter.default.addObserver(self, selector: #selector(MainViewController.currentLocaleDidChange(_:)), name: NSLocale.currentLocaleDidChangeNotification, object: nil)
+    }
+    
+    /**
+     ToolTipControl: Show Tooltip on main view
+     */
+    func showToolTip() {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) { [weak self] in
+            guard let strongSelf = self else { return }
+            let controller = PopTip()
+            controller.showToolTip(onItem: strongSelf.buttonStripView)
+            strongSelf.present(controller, animated: true)
+        }
     }
 
     override func viewDidLayoutSubviews() {

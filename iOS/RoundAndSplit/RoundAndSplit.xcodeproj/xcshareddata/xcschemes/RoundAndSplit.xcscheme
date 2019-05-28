@@ -52,6 +52,16 @@
                ReferencedContainer = "container:RoundAndSplit.xcodeproj">
             </BuildableReference>
          </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "A24AC59B229CB67A00F0068A"
+               BuildableName = "PopTipTests.xctest"
+               BlueprintName = "PopTipTests"
+               ReferencedContainer = "container:../../../ToolTipControl/ToolTipControl.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
